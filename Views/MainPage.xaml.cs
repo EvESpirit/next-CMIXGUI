@@ -5,13 +5,13 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using nextCMIXGUI_WinUI.Core;
+using NextCmixGui.Core;
 using Windows.Storage.Pickers;
 using Windows.ApplicationModel.DataTransfer;
 using WinRT.Interop;
 using Microsoft.UI.Xaml.Media;
 
-namespace nextCMIXGUI_WinUI.Views
+namespace NextCmixGui.Views
 {
     public sealed partial class MainPage : Page
     {
@@ -19,7 +19,6 @@ namespace nextCMIXGUI_WinUI.Views
         private CmixRunner _runner;
         private bool _isProcessing = false;
         
-        // Settings extension for preserving old input/output temporarily
         private string _previousInput = "";
         private string _previousOutput = "";
 
@@ -305,7 +304,7 @@ namespace nextCMIXGUI_WinUI.Views
                     barPretrain.Value = e.Percent;
                     lblPretrainPercent.Text = $"{e.Percent:F2}%";
                     
-                    if (e.Eta > 0 && e.Eta < 31536000) // Less than a year
+                    if (e.Eta > 0 && e.Eta < 31536000)
                     {
                         var ts = TimeSpan.FromSeconds(e.Eta);
                         lblPretrainStats.Text = $"Speed: {(e.Speed / 1024):F2} KB/s - ETA: {ts:hh\\:mm\\:ss}";

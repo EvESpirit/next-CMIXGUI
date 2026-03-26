@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace nextCMIXGUI_WinUI.Core
+namespace NextCmixGui.Core
 {
     public static class Translations
     {

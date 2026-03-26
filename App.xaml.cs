@@ -2,9 +2,9 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
 using System;
-using nextCMIXGUI_WinUI.Views;
+using NextCmixGui.Views;
 
-namespace nextCMIXGUI_WinUI
+namespace NextCmixGui
 {
     public partial class App : Application
     {
@@ -22,12 +22,10 @@ namespace nextCMIXGUI_WinUI
             Frame rootFrame = new Frame();
             rootFrame.NavigationFailed += OnNavigationFailed;
             
-            // Set App title
             m_window.Title = "next-CMIXGUI";
 
             m_window.Content = rootFrame;
             
-            // Navigate to our Views.MainPage
             rootFrame.Navigate(typeof(MainPage), e.Arguments);
             m_window.Activate();
         }

@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace nextCMIXGUI_WinUI.Core
+namespace NextCmixGui.Core
 {
     public class RunConfig
     {
@@ -21,7 +21,7 @@ namespace nextCMIXGUI_WinUI.Core
 
     public class ProgressData
     {
-        public string Type { get; set; } // "pretrain" or "main"
+        public string Type { get; set; }
         public double Percent { get; set; }
         public double Speed { get; set; }
         public double Eta { get; set; }
@@ -32,7 +32,7 @@ namespace nextCMIXGUI_WinUI.Core
     {
         public event Action<string, string> OnLog;
         public event Action<ProgressData> OnProgress;
-        public event Action<bool, long> OnFinish; // bool wasCancelled, long outputFileSize
+        public event Action<bool, long> OnFinish;
 
         private Process _currentProcess;
         private CancellationTokenSource _cts;
@@ -94,10 +94,8 @@ namespace nextCMIXGUI_WinUI.Core
 
             var exePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "exes", _config.VersionKey, "cmix.exe");
             
-            // In case running from debugger where 'exes' isn't in bindir
             if (!File.Exists(exePath))
             {
-                // Fallback to searching up exactly as python script does
                 var dir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
                 while (dir != null && !Directory.Exists(Path.Combine(dir.FullName, "exes")))
                 {

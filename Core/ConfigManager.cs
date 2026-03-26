@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text.Json;
 
-namespace nextCMIXGUI_WinUI.Core
+namespace NextCmixGui.Core
 {
     public class AppSettings
     {
@@ -30,7 +30,6 @@ namespace nextCMIXGUI_WinUI.Core
             }
             catch
             {
-                // Ignored
             }
             return new AppSettings();
         }
@@ -44,7 +43,6 @@ namespace nextCMIXGUI_WinUI.Core
             }
             catch
             {
-                // Ignored
             }
         }
     }
