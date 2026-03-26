@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "nextCMIXGUI_WinUI (Unpackaged)": {
+      "commandName": "Project"
+    },
+    "nextCMIXGUI_WinUI (Package)": {
+      "commandName": "MsixPackage"
+    }
+  }
+}
