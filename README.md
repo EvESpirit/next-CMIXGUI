@@ -1,6 +1,6 @@
 
 # next-CMIXGUI
-An updated C#/WinUI3-based refactor of the [cmix_gui project](https://github.com/moisespr123/cmix_gui).
+An updated C#/WinUI3-based refactor of the [cmix_gui](https://github.com/moisespr123/cmix_gui) project.
 
 ![next-CMIXGUI](https://github.com/user-attachments/assets/a16445fb-3ffe-42c7-9612-eeb8c287e0ca)
 
